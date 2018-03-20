@@ -1,5 +1,5 @@
 
-// Trivia API below //
+//Trivia API below //
 
 // function displayTriviaInfo() {
 //
@@ -9,95 +9,109 @@
 //   // Creating an AJAX call for the retrieval of the trivia
 //   $.ajax({
 //     url: queryURL,
-//     method: "GET"
+//     method: "POST"
 //   }).then(function(response) {
+//
+//   });
+
+function displayTriviaInfo() {
+  $.ajax({
+     url:  'https://opentdb.com/api.php?amount=1&category=23&difficulty=hard&type=multiple',
+     method: "POST"
+   }).then(function(response) {
+
+
+
+
 
   // Variables
 
 triviaGameObj = {
-
-
-    masterQuestions: [{
-            question: "Where did Kayne West grow up?",
-            answers: ["Atlanta, GA", "Cincinnati, OH", "Chicago, IL", "New York, NY"],
-            correctAnswer: "Chicago, IL",
-            visual: 'assets/images/kayne.gif',
-            sound: 'assets/audio/kayne2.mp3',
-            fact: "Kanye spent fifth grade in China while his mother taught at Nanjing University as part of an exchange program."
-        }, {
-            question: "What is best-selling single of all time?",
-            answers: ["My Heart Will Go On by Celine Dion", "It's Now Or Never by Elvis Presley", "I Will Survive by Gloria Gaynor", "White Christmas by Bing Crosby"],
-            correctAnswer: "White Christmas by Bing Crosby",
-            visual: 'assets/images/bing.gif',
-            sound: 'assets/audio/bing.mp3',
-            fact: "This single has sold more than 100 million copies worldwide."
-        }, {
-            question: "What was The Beatles first hit single in America?",
-            answers: ["Twist And Shout", "I Want To Hold Your Hand", "Love Me Do", "I Saw Her Standing There"],
-            correctAnswer: "I Want To Hold Your Hand",
-            visual: 'assets/images/beatles.gif',
-            sound: 'assets/audio/beatles.mp3',
-            fact: "This song was released in 1963 and charted at #1 on the US Billboards on January 13, 1964."
-        }, {
-            question: "What artist has acheived the highest sales in history of an album in its first week?",
-            answers: ["Taylor Swift", "NSYNC", "Adele", "Britney Spears"],
-            correctAnswer: "Adele",
-            visual: 'assets/images/adele.gif',
-            sound: 'assets/audio/hello.mp3',
-            fact: "Adele sold 3.38 million copies of her album 25 in the first week of its release."
-
-        },
-
-        {
-            question: "Who was most streamed artist of 2015?",
-            answers: ["Ed Sheeran", "Drake", "Taylor Swift", "Katy Perry"],
-            correctAnswer: "Drake",
-            visual: 'assets/images/drake.gif',
-            sound: "assets/audio/drake.mp3",
-            fact: "Drake's music was streamed over 1.8 billion times in 2015.",
-
-        }, {
-            question: "What British Rock band from the 1970s had a one-armed drummer?",
-            answers: ["The Who", "Def Leppard", "Led Zepplin", "Queen"],
-            correctAnswer: "Def Leppard",
-            visual: 'assets/images/def.gif',
-            sound: "assets/audio/def.mp3",
-            fact: 'The drummer, Rick Allen was involved in a driving accident in 1984 that led to the amputation of his right arm.',
-
-        }, {
-            question: "What is the first ever rap song to win the Academy Award for Best Original Song?",
-            answers: ["Thrift Shop by Macklemore", "Gansta's Paradise by Coolio", "Lose Yourself by Eminem", "Holy Grail by Jay-z"],
-            correctAnswer: "Lose Yourself by Eminem",
-            visual: 'assets/images/eminem.gif',
-            sound: "assets/audio/eminem.mp3",
-            fact: "Lose Yourself was written in 2002 for the motion picture 8 Mile."
-
-        }, {
-            question: "What member of the Red Hot Chili Peppers grew up with Cher as his babysitter?",
-            answers: ["Anthony Kiedis", "Flea", "Chad Smith", "Josh Klinghoffer"],
-            correctAnswer: "Anthony Kiedis",
-            visual: 'assets/images/redhotchilipeppers.gif',
-            sound: "assets/audio/redhotchilipeppers.mp3",
-            fact: "Seven out of the band’s 11 albums are certified platinum – Out of the seven, six are certified multi-platinum.",
-
-        }, {
-            question: "What was the band known as Linkin Park originally called?",
-            answers: ["Reanimators", "Meteora", "Hybrid Theory", "Xero"],
-            correctAnswer: "Xero",
-            visual: 'assets/images/linkinpark.gif',
-            sound: "assets/audio/linkinpark.mp3",
-            fact: "Linkin Park auditioned and were rejected for record deals 44 times before finally being accepted by Warner Brothers and becoming one of the biggest musical acts of the past two decades. In fact, Warner Brothers had rejected Linkin Park three times before they finally signed them.",
-
-        }, {
-            question: "Who is the youngest artist to win a Grammy Award?",
-            answers: ["Meghan Trainor", "Ed Sheeran", "Taylor Swift", "Bruno Mars"],
-            correctAnswer: "Taylor Swift",
-            visual: 'assets/images/taylor.gif',
-            sound: "assets/audio/taylor.mp3",
-            fact: "Taylor is the youngest artist to win a Grammy at the age of 20 for her album Fearless.",
-
-        }
-    ],
+//
+//
+//     masterQuestions: [{
+//             question: "Where did Kayne West grow up?",
+//             answers: ["Atlanta, GA", "Cincinnati, OH", "Chicago, IL", "New York, NY"],
+//             correctAnswer: "Chicago, IL",
+//             visual: 'assets/images/kayne.gif',
+//             sound: 'assets/audio/kayne2.mp3',
+//             fact: "Kanye spent fifth grade in China while his mother taught at Nanjing University as part of an exchange program."
+//
+//         }, {
+//             question: "What is best-selling single of all time?",
+//             answers: ["My Heart Will Go On by Celine Dion", "It's Now Or Never by Elvis Presley", "I Will Survive by Gloria Gaynor", "White Christmas by Bing Crosby"],
+//             correctAnswer: "White Christmas by Bing Crosby",
+//             visual: 'assets/images/bing.gif',
+//             sound: 'assets/audio/bing.mp3',
+//             fact: "This single has sold more than 100 million copies worldwide."
+//         }, {
+//             question: "What was The Beatles first hit single in America?",
+//             answers: ["Twist And Shout", "I Want To Hold Your Hand", "Love Me Do", "I Saw Her Standing There"],
+//             correctAnswer: "I Want To Hold Your Hand",
+//             visual: 'assets/images/beatles.gif',
+//             sound: 'assets/audio/beatles.mp3',
+//             fact: "This song was released in 1963 and charted at #1 on the US Billboards on January 13, 1964."
+//
+//         }, {
+//             question: "What artist has acheived the highest sales in history of an album in its first week?",
+//             answers: ["Taylor Swift", "NSYNC", "Adele", "Britney Spears"],
+//             correctAnswer: "Adele",
+//             visual: 'assets/images/adele.gif',
+//             sound: 'assets/audio/hello.mp3',
+//             fact: "Adele sold 3.38 million copies of her album 25 in the first week of its release."
+//
+//         },
+//
+//         {
+//             question: "Who was most streamed artist of 2015?",
+//             answers: ["Ed Sheeran", "Drake", "Taylor Swift", "Katy Perry"],
+//             correctAnswer: "Drake",
+//             visual: 'assets/images/drake.gif',
+//             sound: "assets/audio/drake.mp3",
+//             fact: "Drake's music was streamed over 1.8 billion times in 2015.",
+//
+//         }, {
+//             question: "What English Rock band from the 1970s had a one armed drummer?",
+//             answers: ["The Who", "Def Leppard", "Led Zepplin", "Queen"],
+//             correctAnswer: "Def Leppard",
+//             visual: 'assets/images/def.gif',
+//             sound: "assets/audio/def.mp3",
+//             fact: 'The drummer, Rick Allen was involved in a driving accident in 1984 that led to the amputation of his right arm.',
+//
+//         }, {
+//             question: "What is the first ever rap song to win the Academy Award for Best Original Song?",
+//             answers: ["Thrift Shop by Macklemore", "Gansta's Paradise by Coolio", "Lose Yourself by Eminem", "Holy Grail by Jay-z"],
+//             correctAnswer: "Lose Yourself by Eminem",
+//             visual: 'assets/images/eminem.gif',
+//             sound: "assets/audio/eminem.mp3",
+//             fact: "Lose Yourself was written in 2002 for the motion picture 8 Mile."
+//
+//         }, {
+//             question: "Who was the first American to hear of Joseph Stalin's Death?",
+//             answers: ["Dwight Eisenhower", "Johnny Cash", "Tony Blair", "Pat Benatar"],
+//             correctAnswer: "Johnny Cash",
+//             visual: 'assets/images/johnny.gif',
+//             sound: "assets/audio/johnny.mp3",
+//             fact: "Johnny was working as a radio operator with the US Airforce intercepting Soviet Army transmissions during the time of Stalin's death.",
+//
+//         }, {
+//             question: "What famous song was recorded in only one take?",
+//             answers: ["Hey Jude by The Beatles", "All I Want for Christmas is You by Mariah Carey", "My Heart Will Go On by Celine Dion", "The Ocean by Led Zepplin"],
+//             correctAnswer: "My Heart Will Go On by Celine Dion",
+//             visual: 'assets/images/celine.gif',
+//             sound: "assets/audio/celine.mp3",
+//             fact: "Intially Celine didn't even want to record this famous love song but was convinced by her husband and producers of film Titantic.",
+//
+//         }, {
+//             question: "Who is the youngest artist to win a Grammy Award?",
+//             answers: ["Meghan Trainor", "Ed Sheeran", "Taylor Swift", "Bruno Mars"],
+//             correctAnswer: "Taylor Swift",
+//             visual: 'assets/images/taylor.gif',
+//             sound: "assets/audio/taylor.mp3",
+//             fact: "Taylor is the youngest artist to win a Grammy at the age of 20 for her album Fearless.",
+//
+//         }
+//     ],
 
 // Push the correct guess here and then get the length of the array and display that number at end
 guessesCorrect: 0,
@@ -189,7 +203,7 @@ questionLoad: function() {
     $('#timer').html('<h2>' + 'Time Remaining: ' + 15 + '</h2>');
     this.pageLoad.run();
     // This pushes the random picked question object to the current question array
-    this.currentQuestion.push(this.randomPick());
+    this.currentQuestion.push(this.displayTriviaInfo());
 
     console.log("Current Question: " + JSON.stringify(this.currentQuestion));
     $('#question').html('<h2>' + triviaGameObj.currentQuestion[0].question + '<h2>');
@@ -216,17 +230,17 @@ questionLoad: function() {
 
     });
 },
-// Randomly picks the next question
-randomPick: function() {
-
-    this.masterIndex = Math.floor(Math.random() * this.masterQuestions.length);
-    var initialPick = this.masterQuestions[this.masterIndex];
-
-    console.log("Initial Pick: " + JSON.stringify(initialPick));
-    return initialPick;
-
-
-},
+// // Randomly picks the next question
+// randomPick: function() {
+//
+//     this.masterIndex = Math.floor(Math.random() * this.masterQuestions.length);
+//     var initialPick = this.masterQuestions[this.masterIndex];
+//
+//     console.log("Initial Pick: " + JSON.stringify(initialPick));
+//     return initialPick;
+//
+//
+// },
 
 // splice function to remove the current question object from the array so that it cannot be populated again
 spliceArray: function() {
@@ -302,7 +316,7 @@ displayAssets: function() {
 
 summaryPage: function() {
 
-        $('#question').html('<h2>' + "Here's how you did: " + '</h2>');
+        $('#question').html('<h2>' + "Thanks for playing! Here's how you did: " + '</h2>');
 
         // display correct guesses
         $('#answers').html("<p>" + "Correct Guesses: " + triviaGameObj.guessesCorrect + "</p>");
@@ -314,8 +328,9 @@ summaryPage: function() {
         $('#answers').append("<p>" + "Unanswered Guesses: " + triviaGameObj.unansweredGuesses + "</p>");
 
     }
-
-}
+  }
+});
+};
 
 // GAME BEGINS with Initial setup of page and start click push
 
@@ -335,7 +350,6 @@ $('#start').on('click', function(event) {
     triviaGameObj.questionLoad();
 
 });
-
 // STAGE 2: User guesses
 
 // This initiates the user click/guess after the buttons are created on the screen
@@ -377,7 +391,5 @@ $(document.body).on('click', '.guess', function(event) {
 
     }
 });
-
-
 
 });

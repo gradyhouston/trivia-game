@@ -4,10 +4,16 @@ font-family: 'Rokkitt', serif;*/
 
 /*To disable the button click cursor: not-allowed; */
 body {
-	font-family: 'Raleway', sans-serif;
-	background-color: rgb(2, 62, 115);
-
-
+	font-family: 'Asap', sans-serif;
+  height: 100%;
+  width: 100%;
+	/* background-color: rgb(2, 62, 115); */
+  background-image: url(../images/trivia_bg3.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  /* padding-bottom: 70px; */
 }
 
 /*.jumbotron {
@@ -36,11 +42,17 @@ body {
 }
 
 h1 {
-	font-size: 80px;
+  font-family: 'Asap', sans-serif;
+	font-size: 60px;
 	/*text-shadow: */
 	margin-bottom: -30px;
-
 }
+
+h2 {
+  font-family: 'Asap', sans-serif;
+}
+
+
 
 /*This styles the correct answer when displayed on the answer page*/
 span {
@@ -48,9 +60,14 @@ span {
 
 }
 
+#picture {
+  display: flex;
+  justify-content: center;
+}
+
 .guess {
 	font-size: 20px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Asap', sans-serif;
 	display: block;
 	padding: 20px;
 	margin-bottom: 10px;
@@ -79,30 +96,31 @@ p {
 
 
 .triviaBox {
-
-	border: solid 2px black;
-
+	border: solid 2px transparent;
 }
 
 .panel {
     background-color: rgb(242,242, 242);
-    background-color: rgba(242,242, 242, .8);
+    background-color: rgba(242,242, 242, .15);
     /*background-color: transparent;*/
     /* height: 700px; */
     /*overflow: auto;*/
     /*margin-top: -50px;*/
 
 }
+
+
+
 .pictureframe {
 	height: 300px;
 	width: 567px;
 	margin-top: 25px;
-
 }
 
 
 .img-center {
-	margin:0 auto;
+	margin: 0 auto;
+
 }
 
 .img-fluid {
@@ -123,11 +141,52 @@ p {
 
 #question {
 	font-size: 25px;
-
-
 }
+
+
 
 
 #correctAnswer {
 	font-size:25px;
 }
+
+.footer {
+  font-family: 'Asap', sans-serif;
+  height: 25px;
+  background-color: rgba(242,242, 242, .15);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* position: absolute; */
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* padding: 1rem; */
+  width: 100%;
+  /* margin-left: 700px; */
+  color: #333;
+}
+
+/* .navbar-fixed-bottom {
+  height: 25px;
+  background-color: rgba(242,242, 242, .15);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* padding: 1rem; */
+  width: 100%;
+  /* margin-left: 700px; */
+  color: #333;
+} */
