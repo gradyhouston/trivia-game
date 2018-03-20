@@ -45,7 +45,6 @@ triviaGameObj = {
             visual: 'assets/images/adele.gif',
             sound: 'assets/audio/hello.mp3',
             fact: "Adele sold 3.38 million copies of her album 25 in the first week of its release."
-
         },
 
         {
@@ -66,7 +65,7 @@ triviaGameObj = {
 
         }, {
             question: "What is the first ever rap song to win the Academy Award for Best Original Song?",
-            answers: ["Thrift Shop by Macklemore", "Gansta's Paradise by Coolio", "Lose Yourself by Eminem", "Holy Grail by Jay-z"],
+            answers: ["Thrift Shop by Macklemore", "Gansta's Paradise by Coolio", "Lose Yourself by Eminem", "Holy Grail by Jay Z"],
             correctAnswer: "Lose Yourself by Eminem",
             visual: 'assets/images/eminem.gif',
             sound: "assets/audio/eminem.mp3",
