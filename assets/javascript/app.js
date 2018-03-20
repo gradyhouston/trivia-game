@@ -86,7 +86,7 @@ triviaGameObj = {
             correctAnswer: "Xero",
             visual: 'assets/images/linkinpark.gif',
             sound: "assets/audio/linkinpark.mp3",
-            fact: "Linkin Park auditioned and were rejected for record deals 44 times before finally being accepted by Warner Brothers and becoming one of the biggest musical acts of the past two decades. In fact, Warner Brothers had rejected Linkin Park three times before they finally signed them.",
+            fact: "Linkin Park auditioned and were rejected for record deals 44 times before finally being accepted by Warner Brothers. In fact, Warner Brothers had rejected Linkin Park three times before they finally signed them.",
 
         }, {
             question: "Who is the youngest artist to win a Grammy Award?",
@@ -271,7 +271,7 @@ correctGuess: function() {
 
 // Incorrect guess function
 incorrectGuess: function() {
-    $('#timer').attr('style', 'font-size: 40px;').html('Wrong!');
+    $('#timer').attr('style', "font-size: 40px;").html('Wrong!');
     $('#correctAnswer').html('The Correct Answer Is: ' + '<span>' + triviaGameObj.currentQuestion[0].correctAnswer + '</span>');
     triviaGameObj.displayAssets();
 

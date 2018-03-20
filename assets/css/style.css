@@ -44,7 +44,7 @@ body {
 h1 {
   font-family: 'Asap', sans-serif;
 	font-size: 60px;
-	/*text-shadow: */
+	text-shadow: 0 2px 2px;
 	margin-bottom: -30px;
 }
 
@@ -137,10 +137,12 @@ p {
 #timer {
 	font-weight: bolder;
 
+
 }
 
 #question {
 	font-size: 25px;
+
 }
 
 
