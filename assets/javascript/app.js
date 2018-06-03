@@ -375,8 +375,5 @@ $(document.body).on('click', '.guess', function(event) {
         triviaGameObj.pageTimeout.timeout();
 
     }
-});
-
-
-
+  });
 });
